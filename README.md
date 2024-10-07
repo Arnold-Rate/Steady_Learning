@@ -25,6 +25,7 @@ data <- gapminder %>%
 View(data)
 
 #lets use the pivot wider
+
 # Load necessary library
 library(dplyr)
 library(tidyr)  # Required for pivot_wider()
@@ -36,6 +37,7 @@ wide_data <- data %>%
 View  (wide_data)
 
 #Reshaping with Pivot longer
+
 library(tidyr)
 long_data <- wide_data %>% 
 pivot_longer (2:13, names_to = "year", values_to = "lifeExp")
@@ -43,8 +45,10 @@ pivot_longer (2:13, names_to = "year", values_to = "lifeExp")
 View(long_data)
 
 #Describing my data
+
 View(USArrests)
 #Range/Spread
+
 min(USArrests$Murder)
 max(USArrests$Murder)
 range(USArrests$Murder)
